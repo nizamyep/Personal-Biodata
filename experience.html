@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience</title>
+    <style>
+        @font-face {
+            font-family: 'JetBrainsMono';
+            src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+                 url('fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'lucidity-condensed';
+            src: url('fonts/ttf/lucidity-condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'JetBrainsMono', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('grunge6.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        header {
+            font-family: 'lucidity-condensed';
+            background-color: #101010;
+            color: #e0e0e0;
+            padding: 25px 20px;
+            text-align: left;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 3px solid #b5b5b5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .experience-container {
+            padding: 120px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .experience-container h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            text-align: center;
+        }
+
+
+        .experience-card-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .image-column img {
+            width: 400px;
+            height: 400px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .experience-card {
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #ff4b5c, #b52234);
+        }
+
+        .experience-card h2 {
+            font-size: 1.8em;
+            color: #ff4b5c;
+        }
+
+        .experience-card p {
+            font-size: 1.1em;
+            line-height: 1.6em;
+            color: #333333;
+        }
+
+        .experience-card .duration {
+            font-size: 1em;
+            font-style: italic;
+            color: #777777;
+        }
+
+
+        .btn-container {
+            position: fixed;
+            top: 28px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            font-family: 'JetBrainsMono', Arial, sans-serif;
+            background-color: #ff4b5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            border: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b52234;
+        }
+
+        footer {
+            background-color: #101010;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Experience
+    </header>
+
+
+    <div class="experience-container">
+        <h1>My Professional Experience</h1>
+
+
+        <div class="experience-card-wrapper">
+            <div class="image-column">
+                <img src="intern1.jpeg">
+                <img src="intern2.jpeg">
+            </div>
+            <div class="experience-card">
+                <h2>Intern - Pustaka State Record Repository</h2>
+                <p class="duration">22 July 2024 - 13 September 2024</p>
+                <p>
+                    During my time at Pustaka State Record Repository, I gained a lot of new knowledge, particularly about my field. Being in this setting provided me with hands-on experience, which included:
+                </p>
+                <ul>
+                    <li>Able to apply existing academic knowledge to the professional setting.</li>
+                    <li>Learned the foundations of Dewey Decimal classification.</li>
+                    <li>Learned the basics of original and copy cataloging using the RDA standard. </li>
+                    <li>Learned how to use Library of Congress subject headings.</li>
+                    <li>Learned how the materials are processed and how and where to put the RFID sticker and call number to the materials themselves.</li>
+                    <li>Recognize the significance and value to preserving the items. </li>
+                </ul>
+                <p>
+                   This experience has taught me multitude of skills, and I appreciate and enjoy my time here, especially being with the familiar faces I know, and I hope the knowledge that was imparted on me then will be of use in the future later. 😁
+                </p>
+            </div>
+            <div class="image-column">
+                <img src="intern3.jpeg">
+                <img src="intern4.jpeg">
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn">Home</a>
+        <a href="about.html" class="btn">About Me</a>
+        <a href="interest.html" class="btn">Interests</a>
+        <a href="education.html" class="btn">Education</a>
+        <a href="experience.html" class="btn">Experience</a>
+        <a href="pledge.html" class="btn">Pledge</a>
+        <a href="bucket.html" class="btn">Bucket List</a>
+        <a href="cv.html" class="btn">CV</a>
+    </div>
+    
+    <footer>
+        © 2024 Made by Nizam. All Rights Reserved.
+    </footer>
+</body>
+</html>

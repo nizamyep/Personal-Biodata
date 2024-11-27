@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Personal Website</title>
+    <style>
+         @font-face {
+            font-family: 'JetBrainsMono';
+            src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+                 url('fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'lucidity-condensed';
+            src: url('fonts/ttf/lucidity-condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'CustomFont', 'JetBrainsMono', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: #2a2a2a; 
+            color: #e0e0e0; 
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('grunge1.jpg'); 
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        header {
+            font-family: 'lucidity-condensed';
+            background-color: #101010;
+            color: #e0e0e0;
+            padding: 25px;
+            text-align: center;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #b5b5b5;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #101010;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            min-height: 80vh;
+        }
+
+        .main-container h1 {
+            font-size: 2.2em;
+            color: #fff;
+            margin: 30px 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            font-family: 'CustomFont', 'JetBrainsMono', Arial, sans-serif;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background-color: #b5b5b5;
+            margin: 20px 0;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px; 
+        }
+
+        .btn {
+            background-color: #ff4b5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            border: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b52234;
+        }
+
+        @media (max-width: 768px) {
+            .main-container h1 {
+                font-size: 1.8em;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 12px 24px;
+            }
+
+            .bar {
+                height: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome to My Personal Website
+    </header>
+    <div class="main-container">
+        <div class="bar"></div>
+
+        <h1>Wanna know more about me? <br> Click down below to get to know me!</h1>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn">Home</a>
+        <a href="about.html" class="btn">About Me</a>
+        <a href="interest.html" class="btn">Interests</a>
+        <a href="education.html" class="btn">Education</a>
+        <a href="experience.html" class="btn">Experience</a>
+        <a href="pledge.html" class="btn">Pledge</a>
+        <a href="bucket.html" class="btn">Bucket List</a>
+        <a href="cv.html" class="btn">CV</a>
+    </div>
+        <div class="bar"></div>
+    </div>
+
+    <footer>
+        © 2024 Made by Nizam. All Rights Reserved.
+    </footer>
+</body>
+</html>

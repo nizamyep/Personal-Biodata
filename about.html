@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        @font-face {
+            font-family: 'JetBrainsMono';
+            src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+                 url('fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'lucidity-condensed';
+            src: url('fonts/ttf/lucidity-condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'JetBrainsMono', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('grunge.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        header {
+            font-family: 'lucidity-condensed';
+            background-color: #101010;
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: left;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        footer {
+            background-color: #101010;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 100px 20px 80px;
+            gap: 30px;
+        }
+
+        .left-container {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .name-container,
+        .text-container,
+        .description-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #b5b5b5;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+            width: 800px
+        }
+
+        .name-container h1 {
+            font-size: 2em;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        .text-container p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .description-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 400px;
+            height: 650px;
+            border-radius: 10px;
+            filter: grayscale(70%) contrast(120%) brightness(90%);
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .image-container img:hover {
+            filter: none;
+            transform: scale(1.05);
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social a {
+            display: inline-block;
+            width: 200px;
+            height: 40px;
+            background: #e0e0e0;
+            color: #2a2a2a;
+            border-radius: 50%;
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .social a:hover {
+            background: #ff4b5c;
+            color: #fff;
+        }
+
+        .btn-container {
+            position: fixed;
+            top: 28px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            background-color: #ff4b5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            border: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b52234;
+        }
+    </style>
+</head>
+<body>
+    <header>About Me</header>
+
+    <div class="main-container">
+        <div class="left-container">
+            <div class="name-container">
+                <h1>Syed Muhammad Nizamuddin bin Syeed Zainal Abidin</h1>
+            </div>
+            <div class="text-container">
+                <p><span>Date of Birth:</span><span>17/11/2004</span></p>
+                <p><span>Age:</span><span>20</span></p>
+                <p><span>Place of Birth:</span><span>Hospital Umum Sarawak</span></p>
+            </div>
+            <div class="description-container">
+                <p>Assalamualaikum, hello, hi, nice to meet you and thank you for taking the time to get to know me. I count myself as an ambivert, which means that there are times of the day when I talk a lot and times when I don't; it essentially means that I need to recharge my battery, which is funny to think about. I have five siblings, the fourth of who is me. Aside from that, I believe that happiness is the key to life, and I will continue to strive for it every day. When I am down, I will do my best to keep myself entertained, as I always have. </p>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <img src="me.jpeg" alt="Profile Picture">
+            <div class="social">
+                <a href="https://wa.me/01121957031">Whatsapp</a>
+                <a href="https://instagram.com/nizamalaydrus" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn">Home</a>
+        <a href="about.html" class="btn">About Me</a>
+        <a href="interest.html" class="btn">Interests</a>
+        <a href="education.html" class="btn">Education</a>
+        <a href="experience.html" class="btn">Experience</a>
+        <a href="pledge.html" class="btn">Pledge</a>
+        <a href="bucket.html" class="btn">Bucket List</a>
+        <a href="cv.html" class="btn">CV</a>
+    </div>
+
+    <footer>
+        © 2024 Made by Nizam. All Rights Reserved.
+    </footer>
+</body>
+</html>
