@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+    <style>
+
+        @font-face {
+            font-family: 'JetBrainsMono';
+            src: url('fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+                 url('fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'lucidity-condensed';
+            src: url('fonts/ttf/lucidity-condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        body {
+            font-family: 'JetBrainsMono', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('grunge5.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+
+        header {
+            font-family: 'lucidity-condensed';
+            background-color: #101010;
+            color: #e0e0e0;
+            padding: 25px 20px;
+            text-align: left;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-bottom: 3px solid #b5b5b5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+
+        .bucket-container {
+            padding: 120px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .bucket-container h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .list-container {
+            background-color: #ffffff;
+            color: #000000;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #ff4b5c;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .btn-container {
+            position: fixed;
+            top: 28px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .btn {
+            font-family: 'JetBrainsMono', Arial, sans-serif;
+            background-color: #ff4b5c;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            border: none;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #b52234;
+        }
+
+
+        footer {
+            background-color: #101010;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bucket List
+    </header>
+
+    <div class="bucket-container">
+        <h1>My Bucket List</h1>
+
+        <div class="list-container">
+            <div class="list-item">
+                <input type="checkbox" id="goal1">
+                <label for="goal1">Perform Umrah</label>
+            </div>
+            <div class="list-item">
+                <input type="checkbox" id="goal2">
+                <label for="goal2">Learn Piano and Guitar</label>
+            </div>
+            <div class="list-item">
+                <input type="checkbox" id="goal3">
+                <label for="goal3">Travel to Japan</label>
+            </div>
+            <div class="list-item">
+                <input type="checkbox" id="goal4">
+                <label for="goal4">Get a job</label>
+            </div>
+            <div class="list-item">
+                <input type="checkbox" id="goal5">
+                <label for="goal5">Get Married</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn">Home</a>
+        <a href="about.html" class="btn">About Me</a>
+        <a href="interest.html" class="btn">Interests</a>
+        <a href="education.html" class="btn">Education</a>
+        <a href="experience.html" class="btn">Experience</a>
+        <a href="pledge.html" class="btn">Pledge</a>
+        <a href="bucket.html" class="btn">Bucket List</a>
+        <a href="cv.html" class="btn">CV</a>
+    </div>
+    
+    <footer>
+        © 2024 Made by Nizam. All Rights Reserved.
+    </footer>
+</body>
+</html>
